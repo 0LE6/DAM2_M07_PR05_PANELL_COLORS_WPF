@@ -19,10 +19,31 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
+            
+            <!-- La parte de los controladores -->
+            <DockPanel Grid.Column="0"
+                       HorizontalAlignment="Center">
+                <ScrollBar Orientation="Vertical"
+                           Margin="15"
+                        />
+                <ScrollBar Orientation="Vertical"
+                           Margin="15"
+                        />
+                <ScrollBar Orientation="Vertical"
+                           Margin="15"
+                        />
+                <ScrollBar Orientation="Vertical"
+                           Margin="15"
+                        />
+            </DockPanel>
+            
+            
 
+            <!-- Panel de color -->
             <Canvas Grid.Column="1"
                     Margin="15"
-                    Background="Bisque">
+                    Background="Bisque"
+                    x:Name="cvColors">
                 
             </Canvas>
         </Grid>
