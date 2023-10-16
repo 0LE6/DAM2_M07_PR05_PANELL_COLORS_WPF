@@ -19,6 +19,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
+
+            <Canvas Grid.Column="1"
+                    Margin="15"
+                    Background="Bisque">
+                
+            </Canvas>
         </Grid>
 
     </Grid>
