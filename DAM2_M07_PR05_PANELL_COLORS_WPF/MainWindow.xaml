@@ -19,34 +19,47 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
-            
-            <!-- La parte de los controladores -->
+
+            <!-- La parte de los controladores A R G B -->
             <DockPanel Grid.Column="0"
                        HorizontalAlignment="Center">
                 <ScrollBar Orientation="Vertical"
-                           Margin="15"
+                           Margin="20"
                         />
                 <ScrollBar Orientation="Vertical"
-                           Margin="15"
+                           Margin="20"
                         />
                 <ScrollBar Orientation="Vertical"
-                           Margin="15"
+                           Margin="20"
                         />
                 <ScrollBar Orientation="Vertical"
-                           Margin="15"
+                           Margin="20"
                         />
             </DockPanel>
-            
-            
 
             <!-- Panel de color -->
             <Canvas Grid.Column="1"
-                    Margin="15"
+                    Margin="20"
                     Background="Bisque"
                     x:Name="cvColors">
-                
+
             </Canvas>
+            
+            
+            
+
         </Grid>
 
+        <DockPanel Grid.Row="2"
+                   VerticalAlignment="Center">
+            <Slider Margin="20,0,20,5" 
+                    DockPanel.Dock="Top"/>
+            <Slider Margin="20,0,20,5" 
+                    DockPanel.Dock="Top"/>
+            <Slider Margin="20,0,20,5" 
+                    DockPanel.Dock="Top"/>
+            <Slider Margin="20,0,20,5" 
+                    DockPanel.Dock="Top"/>
+        </DockPanel>
     </Grid>
 </Window>
