@@ -55,22 +55,33 @@
                            Margin="20"
                            Grid.Row="1"
                            Grid.Column="0"
-                           x:Name="scbNumero"
+                           Minimum="1" Maximum="255"
+                           ValueChanged="scbNumeroA_ValueChanged"
+                           x:Name="scbNumeroA"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
                            Grid.Row="1"
                            Grid.Column="1"
+                           Minimum="1" Maximum="255"
+                           ValueChanged="scbNumeroR_ValueChanged"
+                           x:Name="scbNumeroR"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
                            Grid.Row="1"
                            Grid.Column="2"
+                           Minimum="1" Maximum="255"
+                           ValueChanged="scbNumeroG_ValueChanged"
+                           x:Name="scbNumeroG"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
                            Grid.Row="1"
                            Grid.Column="3"
+                           Minimum="1" Maximum="255"
+                           ValueChanged="scbNumeroB_ValueChanged"
+                           x:Name="scbNumeroB"
                         />
             </Grid>
 

@@ -29,5 +29,25 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         {
 
         }
+
+        private void scbNumeroA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void scbNumeroR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void scbNumeroG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
+
+        private void scbNumeroB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
+        }
     }
 }
