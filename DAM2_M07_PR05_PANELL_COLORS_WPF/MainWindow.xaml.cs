@@ -24,5 +24,10 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         {
             InitializeComponent();
         }
+
+        private void IntegerUpDown_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
     }
 }
