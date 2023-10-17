@@ -23,7 +23,6 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         public MainWindow()
         {
             InitializeComponent();
-            //colorPicker.SelectedColorChanged += ColorPicker_SelectedColorChanged;
         }
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
