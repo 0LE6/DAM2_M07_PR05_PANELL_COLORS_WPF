@@ -119,17 +119,21 @@
 
                 <!-- IntegerUpDown para A, R, G, B -->
                 <xctk:IntegerUpDown Grid.Row="0" Grid.Column="1" 
-                                    Minimum="0" Maximum="255" Increment="1"
-                                    Margin="10"/>
+                                    Minimum="0" Maximum="255"
+                                    Margin="10"
+                                    Value="{Binding ElementName=scbNumeroA, Path=Value}"/>
                 <xctk:IntegerUpDown Grid.Row="1" Grid.Column="1" Minimum="0" 
                                     Maximum="255" Increment="1"
-                                    Margin="10"/>
+                                    Margin="10"
+                                    Value="{Binding ElementName=scbNumeroR, Path=Value}"/>
                 <xctk:IntegerUpDown Grid.Row="2" Grid.Column="3" 
                                     Minimum="0" Maximum="255" Increment="1"
-                                    Margin="10"/>
+                                    Margin="10"
+                                    Value="{Binding ElementName=scbNumeroG, Path=Value}"/>
                 <xctk:IntegerUpDown Grid.Row="3" Grid.Column="3" Minimum="0" 
                                     Maximum="255" Increment="1"
-                                    Margin="10"/>
+                                    Margin="10"
+                                    Value="{Binding ElementName=scbNumeroB, Path=Value}"/>
             </Grid>
         </Grid>
 
@@ -162,24 +166,28 @@
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrA"
+                    ValueChanged="sldrA_ValueChanged"
                     Value="{Binding ElementName=scbNumeroA, Path=Value}"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="1" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrR"
+                    ValueChanged="sldrR_ValueChanged"
                     Value="{Binding ElementName=scbNumeroR, Path=Value}"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="2" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrG"
+                    ValueChanged="sldrG_ValueChanged"
                     Value="{Binding ElementName=scbNumeroG, Path=Value}"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="3" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrB"
+                    ValueChanged="sldrB_ValueChanged"
                     Value="{Binding ElementName=scbNumeroB, Path=Value}"/>
         </Grid>
     </Grid>

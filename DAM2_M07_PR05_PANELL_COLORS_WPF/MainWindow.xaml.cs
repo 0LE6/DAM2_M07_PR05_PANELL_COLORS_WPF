@@ -39,8 +39,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         {
             if (sldrA != null)
             {
-                scbNumeroA.Value = sldrA.Value;
-
+                sldrA.Value = scbNumeroA.Value;
             }
             //double newValue = e.NewValue;
 
@@ -55,12 +54,16 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
 
         private void scbNumeroR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            double newValue = e.NewValue;
+            if (sldrR != null)
+            {
+                sldrR.Value = scbNumeroR.Value;
+            }
+            //double newValue = e.NewValue;
 
-            // Sincronizar con A, G y B
-            scbNumeroA.Value = newValue;
-            scbNumeroG.Value = newValue;
-            scbNumeroB.Value = newValue;
+            //// Sincronizar con A, G y B
+            //scbNumeroA.Value = newValue;
+            //scbNumeroG.Value = newValue;
+            //scbNumeroB.Value = newValue;
 
             // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
             UpdateCanvasColor();
@@ -68,12 +71,16 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
 
         private void scbNumeroG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            double newValue = e.NewValue;
+            if (sldrG != null)
+            {
+                sldrG.Value = scbNumeroG.Value;
+            }
+            //double newValue = e.NewValue;
 
-            // Sincronizar con A, R y B
-            scbNumeroA.Value = newValue;
-            scbNumeroR.Value = newValue;
-            scbNumeroB.Value = newValue;
+            //// Sincronizar con A, R y B
+            //scbNumeroA.Value = newValue;
+            //scbNumeroR.Value = newValue;
+            //scbNumeroB.Value = newValue;
 
             // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
             UpdateCanvasColor();
@@ -81,12 +88,16 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
 
         private void scbNumeroB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            double newValue = e.NewValue;
+            if (sldrB != null)
+            {
+                sldrB.Value = scbNumeroB.Value;
+            }
+            //double newValue = e.NewValue;
 
-            // Sincronizar con A, R y G
-            scbNumeroA.Value = newValue;
-            scbNumeroR.Value = newValue;
-            scbNumeroG.Value = newValue;
+            //// Sincronizar con A, R y G
+            //scbNumeroA.Value = newValue;
+            //scbNumeroR.Value = newValue;
+            //scbNumeroG.Value = newValue;
 
             // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
             UpdateCanvasColor();
@@ -94,19 +105,54 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
 
         private void UpdateCanvasColor()
         {
-            // Obtener los valores A, R, G y B de los controladores
-            byte alpha = (byte)scbNumeroA.Value;
-            byte red = (byte)scbNumeroR.Value;
-            byte green = (byte)scbNumeroG.Value;
-            byte blue = (byte)scbNumeroB.Value;
+            //// Obtener los valores A, R, G y B de los controladores
+            //byte alpha = (byte)scbNumeroA.Value;
+            //byte red = (byte)scbNumeroR.Value;
+            //byte green = (byte)scbNumeroG.Value;
+            //byte blue = (byte)scbNumeroB.Value;
 
-            // Crear un nuevo SolidColorBrush y aplicarlo al fondo del Canvas
-            Color color = Color.FromArgb(alpha, red, green, blue);
-            SolidColorBrush brush = new SolidColorBrush(color);
-            cvColors.Background = brush;
+            //// Crear un nuevo SolidColorBrush y aplicarlo al fondo del Canvas
+            //Color color = Color.FromArgb(alpha, red, green, blue);
+            //SolidColorBrush brush = new SolidColorBrush(color);
+            //cvColors.Background = brush;
         }
 
+        private void IntegerUpDown_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
 
+        }
 
+        // ---------------------- ZONA SLIDERS ----------------------------
+        private void sldrA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldrA != null)
+            {
+                scbNumeroA.Value = sldrA.Value;
+            }
+        }
+
+        private void sldrR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldrR != null)
+            {
+                scbNumeroR.Value = sldrR.Value;
+            }
+        }
+
+        private void sldrG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldrG != null)
+            {
+                scbNumeroG.Value = sldrG.Value;
+            }
+        }
+
+        private void sldrB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if (sldrB != null)
+            {
+                scbNumeroB.Value = sldrB.Value;
+            }
+        }
     }
 }
