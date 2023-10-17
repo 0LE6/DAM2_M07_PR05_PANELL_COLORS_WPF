@@ -49,5 +49,10 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         {
 
         }
+
+        private void colorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+
+        }
     }
 }

@@ -14,16 +14,13 @@
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
 
-        <xctk:IntegerUpDown 
-                    Grid.Row="0"
-                    Minimum="1"
-                    Maximum="40"
-                    ValueChanged="IntegerUpDown_ValueChanged"
-                    Increment="5"
-                    Value="{Binding ElementName=scbNumero, Path=Value}">
-
-        </xctk:IntegerUpDown>
-
+        <!-- Zona del ColorPicker -->
+        <xctk:ColorPicker x:Name="colorPicker"
+                          SelectedColorChanged="colorPicker_SelectedColorChanged"
+                          Grid.Row="0"
+                          Margin="335,10,190,10"/>
+        
+        <!-- Row central -->
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
