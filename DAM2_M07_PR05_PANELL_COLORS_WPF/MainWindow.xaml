@@ -152,6 +152,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
             <!-- Etiquetas A, R, G, B -->
@@ -165,34 +166,51 @@
                        Margin="35,0,0,0"/>
             
             <!-- Los Sliders de los A, R, G, B -->
-            <Slider Margin="20,0,40,5" 
+            <Slider Margin="20,0,20,5" 
                     Grid.Row="0" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrA"
                     ValueChanged="sldrA_ValueChanged"
                     Value="{Binding ElementName=scbNumeroA, Path=Value}"/>
-            <Slider Margin="20,0,40,5" 
+            <Slider Margin="20,0,20,5" 
                     Grid.Row="1" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrR"
                     ValueChanged="sldrR_ValueChanged"
                     Value="{Binding ElementName=scbNumeroR, Path=Value}"/>
-            <Slider Margin="20,0,40,5" 
+            <Slider Margin="20,0,20,5" 
                     Grid.Row="2" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrG"
                     ValueChanged="sldrG_ValueChanged"
                     Value="{Binding ElementName=scbNumeroG, Path=Value}"/>
-            <Slider Margin="20,0,40,5" 
+            <Slider Margin="20,0,20,5" 
                     Grid.Row="3" Grid.Column="1"
                     VerticalAlignment="Center"
                     Minimum="0" Maximum="255"
                     x:Name="sldrB"
                     ValueChanged="sldrB_ValueChanged"
                     Value="{Binding ElementName=scbNumeroB, Path=Value}"/>
+
+            <TextBlock Grid.Row="0" Grid.Column="2" 
+                       Text="{Binding ElementName=scbNumeroA, Path=Value, StringFormat=0}" 
+                       VerticalAlignment="Center"
+                       Margin="0,0,35,0"/>
+            <TextBlock Grid.Row="1" Grid.Column="2" 
+                       Text="{Binding ElementName=scbNumeroR, Path=Value, StringFormat=0}" 
+                       VerticalAlignment="Center"
+                       Margin="0,0,35,0"/>
+            <TextBlock Grid.Row="2" Grid.Column="2" 
+                       Text="{Binding ElementName=scbNumeroG, Path=Value, StringFormat=0}" 
+                       VerticalAlignment="Center"
+                       Margin="0,0,35,0"/>
+            <TextBlock Grid.Row="3" Grid.Column="2" 
+                       Text="{Binding ElementName=scbNumeroB, Path=Value, StringFormat=0}" 
+                       VerticalAlignment="Center"
+                       Margin="0,0,35,0"/>
         </Grid>
     </Grid>
 </Window>
