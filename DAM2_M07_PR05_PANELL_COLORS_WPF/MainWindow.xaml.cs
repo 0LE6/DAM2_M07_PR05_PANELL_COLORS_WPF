@@ -30,6 +30,11 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             if (e.NewValue.HasValue)
             {
                 Color selectedColor = e.NewValue.Value;
+                scbNumeroA.Value = selectedColor.A;
+                scbNumeroR.Value = selectedColor.R;
+                scbNumeroG.Value = selectedColor.G;
+                scbNumeroB.Value = selectedColor.B;
+
                 SolidColorBrush brush = new SolidColorBrush(selectedColor);
                 cvColors.Background = brush; // cambiar el color del canvas con el colorPicker
             }
