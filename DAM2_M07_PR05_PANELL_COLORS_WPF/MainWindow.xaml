@@ -132,16 +132,42 @@
             </Grid>
         </Grid>
 
-        <DockPanel Grid.Row="2"
-                   VerticalAlignment="Center">
-            <Slider Margin="20,0,20,5" 
-                    DockPanel.Dock="Top"/>
-            <Slider Margin="20,0,20,5" 
-                    DockPanel.Dock="Top"/>
-            <Slider Margin="20,0,20,5" 
-                    DockPanel.Dock="Top"/>
-            <Slider Margin="20,0,20,5" 
-                    DockPanel.Dock="Top"/>
-        </DockPanel>
+        <Grid Grid.Row="2">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Etiquetas A, R, G, B -->
+            <TextBlock Text="A" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"
+                       Margin="35,0,0,0"/>
+            <TextBlock Text="R" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"
+                       Margin="35,0,0,0"/>
+            <TextBlock Text="G" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"
+                       Margin="35,0,0,0"/>
+            <TextBlock Text="B" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"
+                       Margin="35,0,0,0"/>
+            
+            <!-- Los Sliders de los A, R, G, B -->
+            <Slider Margin="20,0,40,5" 
+                    Grid.Row="0" Grid.Column="1"
+                    VerticalAlignment="Center"/>
+            <Slider Margin="20,0,40,5" 
+                    Grid.Row="1" Grid.Column="1"
+                    VerticalAlignment="Center"/>
+            <Slider Margin="20,0,40,5" 
+                    Grid.Row="2" Grid.Column="1"
+                    VerticalAlignment="Center"/>
+            <Slider Margin="20,0,40,5" 
+                    Grid.Row="3" Grid.Column="1"
+                    VerticalAlignment="Center"/>
+        </Grid>
     </Grid>
 </Window>
