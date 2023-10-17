@@ -46,10 +46,14 @@
                 </Grid.ColumnDefinitions>
 
                 <!-- Etiquetas A, R, G, B -->
-                <TextBlock Text="A" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"/>
-                <TextBlock Text="R" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"/>
-                <TextBlock Text="G" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center"/>
-                <TextBlock Text="B" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center"/>
+                <TextBlock Text="A" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"
+                           Margin="10,10,10,0"/>
+                <TextBlock Text="R" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"
+                           Margin="10,10,10,0"/>
+                <TextBlock Text="G" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center"
+                           Margin="10,10,10,0"/>
+                <TextBlock Text="B" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center"
+                           Margin="10,10,10,0"/>
 
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
@@ -87,7 +91,7 @@
 
             <!-- Panel de color -->
             <Canvas Grid.Column="1"
-                    Margin="20"
+                    Margin="5,20,20,20"
                     Background="Bisque"
                     x:Name="cvColors">
 
