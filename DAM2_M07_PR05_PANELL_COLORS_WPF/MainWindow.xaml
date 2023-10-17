@@ -57,20 +57,40 @@
 
             </Canvas>
             
-            <!-- Zona de los Pick Colors -->
-            <DockPanel Grid.Column="2">
-                <xctk:IntegerUpDown DockPanel.Dock="Top"
-            Grid.Row="0"
-            Minimum="1"
-            Maximum="40"
-            ValueChanged="IntegerUpDown_ValueChanged"
-            Increment="5"
-            Value="{Binding ElementName=scbNumero, Path=Value}">
+            <!-- Zona de los IntegerUpDown -->
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                </xctk:IntegerUpDown>
-                
-            </DockPanel>
-            
+                <!-- Etiquetas A, R, G, B -->
+                <TextBlock Text="A" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBlock Text="R" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBlock Text="G" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                <TextBlock Text="B" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+
+                <!-- IntegerUpDown para A, R, G, B -->
+                <xctk:IntegerUpDown Grid.Row="0" Grid.Column="1" 
+                                    Minimum="0" Maximum="255" Increment="1"
+                                    Margin="10"/>
+                <xctk:IntegerUpDown Grid.Row="1" Grid.Column="1" Minimum="0" 
+                                    Maximum="255" Increment="1"
+                                    Margin="10"/>
+                <xctk:IntegerUpDown Grid.Row="2" Grid.Column="3" 
+                                    Minimum="0" Maximum="255" Increment="1"
+                                    Margin="10"/>
+                <xctk:IntegerUpDown Grid.Row="3" Grid.Column="3" Minimum="0" 
+                                    Maximum="255" Increment="1"
+                                    Margin="10"/>
+            </Grid>
+
 
         </Grid>
 
