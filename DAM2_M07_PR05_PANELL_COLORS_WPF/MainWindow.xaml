@@ -31,23 +31,48 @@
                 <ColumnDefinition Width="0.5*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- La parte de los controladores A R G B -->
-            <DockPanel Grid.Column="0"
-                       HorizontalAlignment="Center">
+            <!-- La parte de los controladores A, R, G, B -->
+            <Grid Grid.Column="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Etiquetas A, R, G, B -->
+                <TextBlock Text="A" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center"/>
+                <TextBlock Text="R" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"/>
+                <TextBlock Text="G" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center"/>
+                <TextBlock Text="B" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center"/>
+
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
+                           Grid.Row="1"
+                           Grid.Column="0"
                            x:Name="scbNumero"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
+                           Grid.Row="1"
+                           Grid.Column="1"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
+                           Grid.Row="1"
+                           Grid.Column="2"
                         />
                 <ScrollBar Orientation="Vertical"
                            Margin="20"
+                           Grid.Row="1"
+                           Grid.Column="3"
                         />
-            </DockPanel>
+            </Grid>
 
             <!-- Panel de color -->
             <Canvas Grid.Column="1"
@@ -90,8 +115,6 @@
                                     Maximum="255" Increment="1"
                                     Margin="10"/>
             </Grid>
-
-
         </Grid>
 
         <DockPanel Grid.Row="2"
