@@ -119,7 +119,12 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
                 (byte)b
                 );
 
+            // Actualizamos el canvas
             cvColors.Background = pincel;
+
+            // Actualizamos el color picker
+            Color colorParaElColorPicker = Color.FromArgb((byte)a, (byte)r, (byte)g, (byte)b);
+            colorPicker.SelectedColor = colorParaElColorPicker;
         }
 
         // ------------------------------------------------------------------------
