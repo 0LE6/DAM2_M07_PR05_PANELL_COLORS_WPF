@@ -156,18 +156,22 @@
             <Slider Margin="20,0,40,5" 
                     Grid.Row="0" Grid.Column="1"
                     VerticalAlignment="Center"
+                    Minimum="0" Maximum="255"
                     x:Name="sldrA"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="1" Grid.Column="1"
                     VerticalAlignment="Center"
+                    Minimum="0" Maximum="255"
                     x:Name="sldrR"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="2" Grid.Column="1"
                     VerticalAlignment="Center"
+                    Minimum="0" Maximum="255"
                     x:Name="sldrG"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="3" Grid.Column="1"
                     VerticalAlignment="Center"
+                    Minimum="0" Maximum="255"
                     x:Name="sldrB"/>
         </Grid>
     </Grid>
