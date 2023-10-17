@@ -41,71 +41,47 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         // -------------------------- ZONA SCROLLBARS--------------------------------
         private void scbNumeroA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrA != null)
-            {
-                sldrA.Value = scbNumeroA.Value;
-            }
+            if (sldrA != null) sldrA.Value = scbNumeroA.Value;
             ActualizacionColorCanvas();
         }
 
         private void scbNumeroR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrR != null)
-            {
-                sldrR.Value = scbNumeroR.Value;
-            }
+            if (sldrR != null)sldrR.Value = scbNumeroR.Value;
             ActualizacionColorCanvas();
         }
 
         private void scbNumeroG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrG != null)
-            {
-                sldrG.Value = scbNumeroG.Value;
-            }
+            if (sldrG != null) sldrG.Value = scbNumeroG.Value;
             ActualizacionColorCanvas();
         }
 
         private void scbNumeroB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrB != null)
-            {
-                sldrB.Value = scbNumeroB.Value;
-            }
+            if (sldrB != null) sldrB.Value = scbNumeroB.Value;
             ActualizacionColorCanvas();
         }
 
         // ---------------------- ZONA SLIDERS ----------------------------
         private void sldrA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrA != null)
-            {
-                scbNumeroA.Value = sldrA.Value;
-            }
+            if (sldrA != null) scbNumeroA.Value = sldrA.Value;
         }
 
         private void sldrR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrR != null)
-            {
-                scbNumeroR.Value = sldrR.Value;
-            }
+            if (sldrR != null) scbNumeroR.Value = sldrR.Value;
         }
 
         private void sldrG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrG != null)
-            {
-                scbNumeroG.Value = sldrG.Value;
-            }
+            if (sldrG != null) scbNumeroG.Value = sldrG.Value;
         }
 
         private void sldrB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            if (sldrB != null)
-            {
-                scbNumeroB.Value = sldrB.Value;
-            }
+            if (sldrB != null) scbNumeroB.Value = sldrB.Value;
         }
 
         // Método para pintar el canvas cuando se cambien números
