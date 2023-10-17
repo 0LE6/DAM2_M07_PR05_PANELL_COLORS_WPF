@@ -155,16 +155,20 @@
             <!-- Los Sliders de los A, R, G, B -->
             <Slider Margin="20,0,40,5" 
                     Grid.Row="0" Grid.Column="1"
-                    VerticalAlignment="Center"/>
+                    VerticalAlignment="Center"
+                    x:Name="sldrA"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="1" Grid.Column="1"
-                    VerticalAlignment="Center"/>
+                    VerticalAlignment="Center"
+                    x:Name="sldrR"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="2" Grid.Column="1"
-                    VerticalAlignment="Center"/>
+                    VerticalAlignment="Center"
+                    x:Name="sldrG"/>
             <Slider Margin="20,0,40,5" 
                     Grid.Row="3" Grid.Column="1"
-                    VerticalAlignment="Center"/>
+                    VerticalAlignment="Center"
+                    x:Name="sldrB"/>
         </Grid>
     </Grid>
 </Window>
