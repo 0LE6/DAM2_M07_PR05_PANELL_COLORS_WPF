@@ -109,29 +109,14 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         }
 
         // ------------------------------------------------------------------------
-        private void ipdA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
+        private void ipdA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e) { }
 
-        }
+        private void iudA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e) { }
 
-        private void iudA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
+        private void iudR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e) { }
 
-        }
+        private void iudG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e) { }
 
-        private void iudR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-
-        }
-
-        private void iudG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-
-        }
-
-        private void iudB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-
-        }
+        private void iudB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e) { }
     }
 }
