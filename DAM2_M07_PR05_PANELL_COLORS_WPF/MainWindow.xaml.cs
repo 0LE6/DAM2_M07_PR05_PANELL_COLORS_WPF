@@ -31,25 +31,16 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 Color selectedColor = e.NewValue.Value;
                 SolidColorBrush brush = new SolidColorBrush(selectedColor);
-                cvColors.Background = brush; // Aplica el color al fondo del Canvas
             }
         }
-
+        // -------------------------- ZONA SCROLLBARS--------------------------------
         private void scbNumeroA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             if (sldrA != null)
             {
                 sldrA.Value = scbNumeroA.Value;
             }
-            //double newValue = e.NewValue;
-
-            //// Sincronizar con R, G y B
-            //scbNumeroR.Value = newValue;
-            //scbNumeroG.Value = newValue;
-            //scbNumeroB.Value = newValue;
-
-            // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
-            UpdateCanvasColor();
+            ActualizacionColorCanvas();
         }
 
         private void scbNumeroR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -58,15 +49,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 sldrR.Value = scbNumeroR.Value;
             }
-            //double newValue = e.NewValue;
-
-            //// Sincronizar con A, G y B
-            //scbNumeroA.Value = newValue;
-            //scbNumeroG.Value = newValue;
-            //scbNumeroB.Value = newValue;
-
-            // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
-            UpdateCanvasColor();
+            ActualizacionColorCanvas();
         }
 
         private void scbNumeroG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -75,15 +58,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 sldrG.Value = scbNumeroG.Value;
             }
-            //double newValue = e.NewValue;
-
-            //// Sincronizar con A, R y B
-            //scbNumeroA.Value = newValue;
-            //scbNumeroR.Value = newValue;
-            //scbNumeroB.Value = newValue;
-
-            // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
-            UpdateCanvasColor();
+            ActualizacionColorCanvas();
         }
 
         private void scbNumeroB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -92,34 +67,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 sldrB.Value = scbNumeroB.Value;
             }
-            //double newValue = e.NewValue;
-
-            //// Sincronizar con A, R y G
-            //scbNumeroA.Value = newValue;
-            //scbNumeroR.Value = newValue;
-            //scbNumeroG.Value = newValue;
-
-            // Aquí puedes actualizar el fondo del Canvas o realizar otras acciones según sea necesario
-            UpdateCanvasColor();
-        }
-
-        private void UpdateCanvasColor()
-        {
-            //// Obtener los valores A, R, G y B de los controladores
-            //byte alpha = (byte)scbNumeroA.Value;
-            //byte red = (byte)scbNumeroR.Value;
-            //byte green = (byte)scbNumeroG.Value;
-            //byte blue = (byte)scbNumeroB.Value;
-
-            //// Crear un nuevo SolidColorBrush y aplicarlo al fondo del Canvas
-            //Color color = Color.FromArgb(alpha, red, green, blue);
-            //SolidColorBrush brush = new SolidColorBrush(color);
-            //cvColors.Background = brush;
-        }
-
-        private void IntegerUpDown_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-        {
-
+            ActualizacionColorCanvas();
         }
 
         // ---------------------- ZONA SLIDERS ----------------------------
@@ -153,6 +101,51 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 scbNumeroB.Value = sldrB.Value;
             }
+        }
+
+        // Método para pintar el canvas cuando se cambien números
+        private void ActualizacionColorCanvas()
+        {
+            int a = Convert.ToInt32(scbNumeroA.Value);
+            int r = Convert.ToInt32(scbNumeroR.Value);
+            int g = Convert.ToInt32(scbNumeroG.Value);
+            int b = Convert.ToInt32(scbNumeroB.Value);
+
+            SolidColorBrush pincel = new SolidColorBrush();
+            pincel.Color = Color.FromArgb(
+                (byte)a,
+                (byte)r,
+                (byte)g,
+                (byte)b
+                );
+
+            cvColors.Background = pincel;
+        }
+
+        // ------------------------------------------------------------------------
+        private void ipdA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
+
+        private void iudA_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
+
+        private void iudR_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
+
+        private void iudG_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
+        }
+
+        private void iudB_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+
         }
     }
 }
