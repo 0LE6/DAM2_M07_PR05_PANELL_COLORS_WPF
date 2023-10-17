@@ -23,7 +23,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
         public MainWindow()
         {
             InitializeComponent();
-            colorPicker.SelectedColorChanged += ColorPicker_SelectedColorChanged;
+            //colorPicker.SelectedColorChanged += ColorPicker_SelectedColorChanged;
         }
         private void ColorPicker_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
         {
@@ -31,6 +31,7 @@ namespace DAM2_M07_PR05_PANELL_COLORS_WPF
             {
                 Color selectedColor = e.NewValue.Value;
                 SolidColorBrush brush = new SolidColorBrush(selectedColor);
+                cvColors.Background = brush; // cambiar el color del canvas con el colorPicker
             }
         }
         // -------------------------- ZONA SCROLLBARS--------------------------------

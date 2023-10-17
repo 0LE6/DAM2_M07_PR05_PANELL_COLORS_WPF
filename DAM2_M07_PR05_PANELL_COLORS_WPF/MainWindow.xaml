@@ -34,6 +34,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -88,6 +89,23 @@
                            x:Name="scbNumeroB"
                            Value="0"
                         />
+                <!-- Parte de los números -->
+                <TextBlock Grid.Row="2" Grid.Column="0" 
+                           Text="{Binding ElementName=scbNumeroA, Path=Value, StringFormat=0}" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Grid.Row="2" Grid.Column="1" 
+                           Text="{Binding ElementName=scbNumeroR, Path=Value, StringFormat=0}" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Grid.Row="2" Grid.Column="2" 
+                           Text="{Binding ElementName=scbNumeroG, Path=Value, StringFormat=0}" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
+                <TextBlock Grid.Row="2" Grid.Column="3" 
+                           Text="{Binding ElementName=scbNumeroB, Path=Value, StringFormat=0}" 
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,10"/>
             </Grid>
 
             <!-- Panel de color -->
